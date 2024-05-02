@@ -1,12 +1,20 @@
 #!/usr/bin/python3
-'''A module for working with lockboxes.
+'''You have n number of locked boxes in front of you.
+Each box is numbered sequentially from 0 to n - 1
+and each box may contain keys to the other boxes.
 '''
 
 
 def canUnlockAll(boxes):
-    '''Checks if all the boxes in a list of boxes containing the keys
-    (indices) to other boxes can be unlocked given that the first
-    box is unlocked.
+    '''Description:
+    Write a method that determines if all the boxes can be opened
+    Arguments:
+    boxes --> List of Lists, it contains the boxes with keys
+    Reurn boolean
+    Variables:
+    myKeys --> List, Store the number keys to open boxes
+    key --> integer, key of the myKeys
+    boxKey --> iinteger, key inside of an specific box.
     '''
     n = len(boxes)
     seen_boxes = set([0])
