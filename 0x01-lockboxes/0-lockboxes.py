@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+"""
+You have n number of locked boxes in front of you.
+Each box is numbered sequentially
+from 0 to n - 1 and each box may
+contain keys to the other boxes.
+"""
 def canUnlockAll(boxes):
     # We start with the first box already unlocked
     unlocked = [0]  # A list to keep track of unlocked boxes
@@ -17,13 +24,3 @@ def canUnlockAll(boxes):
 
     # If the number of unlocked boxes equals the number of total boxes, return True
     return len(unlocked) == len(boxes)
-
-# Test cases
-boxes = [[1], [2], [3], [4], []]
-print(canUnlockAll(boxes))  # Expected output: True
-
-boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
-print(canUnlockAll(boxes))  # Expected output: True
-
-boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
-print(canUnlockAll(boxes))  # Expected output: False
